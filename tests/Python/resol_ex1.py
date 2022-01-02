@@ -1,4 +1,6 @@
 import numpy as np
+import os,sys
+sys.path.append(os.path.realpath(os.path.join(os.path.dirname(__file__), '../../src/Python/')))
 from jacobi import *
 from gauss_seidel import *
 
@@ -45,7 +47,7 @@ print("b :")
 print(b)
 
 # On retrouve u grâce aux méthodes de Jacobi et Gauss-Seidel
-print("x =",x)
+print("x =", x)
 print("Jacobi : u(x) = ", jacobi(A, b, x0, eps, itmax)[0])
 print("Gauss-Seidel : u(x) = ", gauss_seidel(A, b, x0, eps, itmax)[0])
 

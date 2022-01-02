@@ -42,7 +42,7 @@ double *gauss_seidel_(double *A, double *b, double *x0, double eps, int itmax, i
         {
             S = 0;
             for (j = 0; j < i; j++)
-                S += *(A + i * n + j) * *(x_old + j);
+                S += *(A + i * n + j) * *(x + j);
             for (j = i + 1; j < n; j++)
                 S += *(A + i * n + j) * *(x_old + j);
             *(x + i) = (*(b + i) - S) / *(A + i * n + i);
